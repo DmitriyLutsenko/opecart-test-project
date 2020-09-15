@@ -41,7 +41,20 @@
             {% endif %}
           </ul>
           <div class="tab-content">
-            <div class="tab-pane active" id="tab-description">{{ description }}</div>
+            <div class="tab-pane active" id="tab-description">
+            
+            {% if alter_name %}
+              <div style="text-align: center;">
+                <p style="font-size: 15px; font-weight: 500; padding-top: 5px; padding-bottom: 5px;">
+                  {{ alter_name }}
+                </p>
+              </div>
+              <hr>
+            {% endif %}
+
+            {{ description }}
+            
+            </div>
             {% if attribute_groups %}
             <div class="tab-pane" id="tab-specification">
               <table class="table table-bordered">
